@@ -15,7 +15,13 @@ import './NavBar.css';
 class NavBarComponent extends Component {
     componentWillMount() {
         this.props.fetchRefSidebarData();
+    }
+    componentDidMount(){
+        //this.activeRoute = this.props.location.pathname;
+    }
+    shouldComponentUpdate(){
         this.activeRoute = this.props.location.pathname;
+        return true
     }
     render() {
         const menuItems = this.props.items.menu ? this.props.items.menu.map((item, i) => (
