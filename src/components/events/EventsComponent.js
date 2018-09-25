@@ -9,28 +9,25 @@ import fetchRefData from '../../actions/refData';
 
 
 
-class HomeComponent extends Component {
+class EventsComponent extends Component {
   componentWillMount() {
-    this.props.fetchRefData();
+  //  this.props.fetchRefData();
   }
   render() {
-    const items = this.props.items.map((item,i) => (
-      <div key = {i}>{item.itemName}</div>
-    ))
     return (
       <div>
-         Home Component
+         Event Component
       </div>
     )
   }
 }
-HomeComponent.propTypes = {
-  items : PropTypes.array.isRequired,
-  fetchRefData : PropTypes.func.isRequired
-}
+// EventsComponent.propTypes = {
+//   items : PropTypes.array.isRequired,
+//   fetchRefData : PropTypes.func.isRequired
+// }
 
 const mapStateToProps = (state) => ({
   items : state.data.items
 })
 
-export default withRouter(connect(mapStateToProps,{fetchRefData})(HomeComponent));
+export default withRouter(connect(mapStateToProps,{fetchRefData})(EventsComponent));
