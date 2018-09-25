@@ -16,10 +16,10 @@ class NavBarComponent extends Component {
     componentWillMount() {
         this.props.fetchRefSidebarData();
     }
-    componentDidMount(){
+    componentDidMount() {
         //this.activeRoute = this.props.location.pathname;
     }
-    shouldComponentUpdate(){
+    shouldComponentUpdate() {
         this.activeRoute = this.props.location.pathname;
         return true
     }
@@ -36,40 +36,16 @@ class NavBarComponent extends Component {
             <div className="sidebarWrapper">
                 <nav id="sidebar" ref={(node) => { this.sidebarNode = node }}>
                     <div className="sidebar-header">
+                        <button type="button" id="sidebarCollapse" ref={node => this.menuIcon = node} onClick={() => { this.toggleNavbar() }} className="navbar-btn btn-align handIcon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                     </div>
                     <ul className="list-unstyled components">
-                        {/* <li className={this.activeRoute === '/' ? 'active' : ''}>
-                            <NavLink to="/" onClick={() => this.navigateTrigger('/')}>
-                                <i className="fa fa-home" aria-hidden="true"></i>
-                                <span class="menu-label">Home</span>
-                            </NavLink>
-                        </li>
-                        <li className={this.activeRoute === '/about' ? 'active' : ''} >
-                            <NavLink to="/about" onClick={() => this.navigateTrigger('/about')}>
-                                <i className="fa fa-briefcase" aria-hidden="true"></i>
-                                <span class="menu-label">About</span>
-                            </NavLink>
-                        </li>
-                        <li className={this.activeRoute === '/events' ? 'active' : ''}>
-                            <NavLink to="/events" className="" onClick={() => this.navigateTrigger('/events')}>
-                                <i className="fa fa-calendar"></i>
-                                <span class="menu-label">Events</span>
-                            </NavLink>
-                        </li>
-                        <li className={this.activeRoute === '/contactus' ? 'active' : ''}>
-                            <NavLink to="/contactus" onClick={() => this.navigateTrigger('/contactus')}>
-                                <i className="fa fa-phone"></i>
-                                <span class="menu-label">Contact Us</span>
-                            </NavLink>
-                        </li> */}
                         {menuItems}
                     </ul>
                 </nav>
-                <button type="button" id="sidebarCollapse" ref={node => this.menuIcon = node} onClick={() => { this.toggleNavbar() }} className="navbar-btn btn-align handIcon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </div>
         )
     }
@@ -78,6 +54,7 @@ class NavBarComponent extends Component {
         let menuEL = this.menuIcon;
         sideEL.classList.contains('active') ? sideEL.classList.remove('active') : sideEL.classList.add('active');
         menuEL.classList.contains('active') ? menuEL.classList.remove('active') : menuEL.classList.add('active');
+        this.props.addClassToParent();
     }
     navigateTrigger(route) {
         this.activeRoute = route;

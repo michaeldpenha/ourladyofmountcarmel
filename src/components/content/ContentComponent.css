@@ -1,0 +1,16 @@
+.content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+    margin-left : 250px;
+}
+
+.active .content {
+    margin-left : 80px;
+}
+
+@media (max-width: 768px) {
+    .content{
+        margin-left: 0px;
+    }
+}
