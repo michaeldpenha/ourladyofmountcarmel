@@ -1,13 +1,13 @@
-import {FETCH_REFDATA} from '../actions/types';
+import {FETCH_REF_SIDEBAR_DATA} from '../actions/types';
 
 const initialState = {
-    items : []
+    sidebar : {}
 }
 const items = (state = initialState , action) => {
     switch(action.type){
-        case FETCH_REFDATA : return {
+        case FETCH_REF_SIDEBAR_DATA : return {
             ...state,
-            items : action.payload
+            sidebar : action.payload
         }
         default : return state;
     }
