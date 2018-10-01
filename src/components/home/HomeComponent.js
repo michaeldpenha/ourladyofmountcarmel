@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import { connect }  from 'react-redux';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom'
 import fetchRefSidebarData from '../../actions/refData';
 import ParallaxComponent from '../parallax/ParallaxComponent';
 import './HomeComponent.css';
+import TestimonalComponent from '../testimonals/TestimonalComponent';
+import SectionHeaderComponent from '../sectionHeader/SectionHeaderComponent';
 // const HomeComponent =  (props) => (
 //    <h2>home</h2>
 // )
@@ -21,23 +23,22 @@ class HomeComponent extends Component {
     // ))
     return (
       <div>
-         <ParallaxComponent parallaxClass="parallaxImage"></ParallaxComponent>
-         <div >
-Scroll Up and Down this page to see the parallax scrolling effect.
-This div is just here to enable scrolling.
-Tip: Try to remove the background-attachment property to remove the scrolling effect.
-</div>
+        <ParallaxComponent parallaxClass="parallaxImage"></ParallaxComponent>
+        <div class="row section">
+          <SectionHeaderComponent sectionHeaderStyle="testimonal"></SectionHeaderComponent>
+          <TestimonalComponent ></TestimonalComponent>
+        </div>
       </div>
     )
   }
 }
 HomeComponent.propTypes = {
-  items : PropTypes.object.isRequired,
-  fetchRefSidebarData : PropTypes.func.isRequired
+  items: PropTypes.object.isRequired,
+  fetchRefSidebarData: PropTypes.func.isRequired
 }
 
 const mapStateToProps = (state) => ({
-  items : state.data.items
+  items: state.data.items
 })
 
-export default withRouter(connect(mapStateToProps,{fetchRefSidebarData})(HomeComponent));
+export default withRouter(connect(mapStateToProps, { fetchRefSidebarData })(HomeComponent));

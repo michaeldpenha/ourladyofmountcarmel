@@ -68,7 +68,10 @@
     padding: 20px;
     background: #46220E;
 }
-
+.dropdown-content{
+    background: #46220E;
+    color:#f1e0e0
+}
 #sidebar .sidebar-header strong {
     display: none;
     font-size: 1.8em;
@@ -81,6 +84,14 @@
 }
 
 #sidebar ul li a:hover {
+    color: #46220E;
+    background: #E5CEA4 ;
+}
+.dropdown-content ul li a:hover {
+    color: #46220E;
+    background: #E5CEA4 ;
+}
+.dropdown-content ul li.active {
     color: #46220E;
     background: #E5CEA4 ;
 }
@@ -155,6 +166,7 @@ a.article:hover {
     width: 40px;
     height: 40px;
     background: #b7a7a7;
+    border-color: #b7a7a7;
     left: 250px;
     position: absolute;
     top: 0;
@@ -162,7 +174,9 @@ a.article:hover {
 #sidebarCollapse.active{
     left : 80px;
 }
-
+#sidebarCollapse:focus{
+    border-color: #b7a7a7;
+}
 #sidebarCollapse span {
     width: 80%;
     height: 2px;

@@ -1,4 +1,18 @@
 
-.parallaxImage{
-    background-image : url('../../assets/images/cross.jpg')
+.parallaxImage, .bg{
+    background-image : url('../../assets/images/cross.jpg');
+
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.row.section {
+    margin: 25px 0;
+}
+.testimonal{
+    border-bottom: 4px solid #b7a7a7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    padding-bottom: 10px;
 }
