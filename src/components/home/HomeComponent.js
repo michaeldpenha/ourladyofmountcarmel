@@ -3,6 +3,7 @@ import ParallaxComponent from '../parallax/ParallaxComponent';
 import './HomeComponent.css';
 import TestimonalComponent from '../testimonals/TestimonalComponent';
 import SectionHeaderComponent from '../sectionHeader/SectionHeaderComponent';
+import ServicesComponent from '../services/ServicesComponent';
 
 class HomeComponent extends Component {
   render() {
@@ -10,8 +11,12 @@ class HomeComponent extends Component {
       <div>
         <ParallaxComponent parallaxClass="parallaxImage"></ParallaxComponent>
         <div class="row section">
-          <SectionHeaderComponent sectionHeaderStyle="testimonal"></SectionHeaderComponent>
+          <SectionHeaderComponent sectionHeaderStyle="testimonal" title="Testimonal"></SectionHeaderComponent>
           <TestimonalComponent ></TestimonalComponent>
+        </div>
+        <div className="row section">
+          <SectionHeaderComponent sectionHeaderStyle="testimonal" title="Services"></SectionHeaderComponent>
+          <ServicesComponent></ServicesComponent>
         </div>
       </div>
     )

@@ -7,7 +7,7 @@ class SectionHeaderComponent extends Component {
     render() {
         return (
             <div class="container">
-                <h1 class={this.props.sectionHeaderStyle}> Testimonals </h1>
+                <h1 class={this.props.sectionHeaderStyle}> {this.props.title} </h1>
             </div>
         )
     }
