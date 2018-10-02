@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom'
-import fetchRefSidebarData from '../../actions/refData';
+import fetchRefSidebarData from '../../actions/refSidebarData';
 import { NavLink, Link } from 'react-router-dom'
 import './Header.css';
 // 9D8253 E5CEA4 46220E

@@ -8,11 +8,13 @@
 }
 
 .row.section {
-    margin: 25px 0;
+    margin: 50px 0 0 0;
 }
 .testimonal{
-    border-bottom: 4px solid #b7a7a7;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
+    border-bottom: 4px solid #9D8253;
+    font-family: sans-serif;
+    font-weight: bolder;
     padding-bottom: 10px;
+    font-style: normal;
+    color: #46220E;
 }

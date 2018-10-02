@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect }  from 'react-redux';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom'
-import fetchRefSidebarData from '../../actions/refData';
+import fetchRefSidebarData from '../../actions/refSidebarData';
 // const HomeComponent =  (props) => (
 //    <h2>home</h2>
 // )

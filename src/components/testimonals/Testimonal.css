@@ -89,17 +89,14 @@
       background-image: url('../../assets/images/profile.png');
   }
   .testimonal-olmc {
-    /* font-family: 'Open Sans',sans-serif;
-    box-shadow: 0 .125pc 5px 0 rgba(0,0,0,.16),0 .020833333in 10px 0 rgba(0,0,0,.12) */
-    /* box-shadow: 5px 10px #888888 , 5px 10px #888888 */
-    border: 1px solid #cccccc;
-    box-shadow: 2px 2px 2px 2px #ccc; 
+    border: 3px solid #9D8253;
+    box-shadow: 2px 2px 2px 2px #9D8253; 
 }
 
 .testimonal-olmc .testimonal-profile-img {
     position: relative;
     background: #fff;
-    border: 5px solid #fff;
+    border: 3px solid #9D8253;
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -116,37 +113,39 @@
     padding: 0 20px;
 }
 .testimonal-description {
-    font-size: 14px;
-    color: #6f6f6f;
+    font-size: 0.9rem;
+    color: #46220E;
     line-height: 25px;
     margin-top: 10px;
     margin-bottom: 25px;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid #9D8253;
     padding-top: 10px;
 }
 
 .testimonal-description i {
     padding-right: 8px;
-    font-size: 24px;
-    color: #cccccc;
+    font-size: 1.5rem;
+    color: #46220E;
 }
 
 .testimonal-name {
     display: block;
-    font-size: 16px;
-    color: #333;
+    font-size: 1.25rem;
+    color: #46220E;
     margin: 15px 0 5px;
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .testimonal-priest {
     display: block;
-    font-size: 14px;
-    color: #6f6f6f;
-    margin-bottom: 10px
+    font-size: 0.75rem;
+    color: #c39239;
+    margin-bottom: 10px;
+    font-style: italic;
 }
-@media only screen and (max-width: 990px) {
+/* @media only screen and (max-width: 990px) {
     .testimonal-olmc {
         margin-bottom:25px
     }
-}
+} */
