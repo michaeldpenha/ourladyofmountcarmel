@@ -4,6 +4,7 @@ import Router from './router/router';
 //import NavBarComponent from './components/navbar/NavBarComponent';
 import ContentComponent from './components/content/ContentComponent';
 import SidebarNavigationComponent from './components/sidebarNavigation/SidebarNavigationComponent';
+import FooterComponent from './components/footer/FooterComponent';
 
 class App extends Component {
 
@@ -15,6 +16,7 @@ class App extends Component {
     return <div>
       <SidebarNavigationComponent></SidebarNavigationComponent>
       <ContentComponent/>
+      <FooterComponent></FooterComponent>
     </div>
   }
   bindActiveClass() {

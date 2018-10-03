@@ -30,11 +30,32 @@ a:focus {
 .padding_top_15{
   padding-top: 15px;
 }
+.padding_left_15{
+  padding-left: 15px;
+}
 .margin0{
   margin : 0;
 }
 .marginTop100{
   margin-top: 100px;
+}
+.marginTop40{
+  margin-top : 40px;
+}
+.marginTop50{
+  margin-top : 50px;
+}
+.marginTop10{
+  margin-top: 10px;
+}
+.tableClass{
+  border : 3px solid #9D8253;
+}
+.width100{
+  width : 100%;
+}
+.textTransformUpperCase{
+  text-transform: uppercase;
 }
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
