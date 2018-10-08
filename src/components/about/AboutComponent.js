@@ -1,33 +1,19 @@
 import React, { Component } from 'react'
-import { connect }  from 'react-redux';
-import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom'
-import fetchRefSidebarData from '../../actions/refSidebarData';
-// const HomeComponent =  (props) => (
-//    <h2>home</h2>
-// )
 
 
+import "./About.css";
+import PageBgComponent from '../pageBg/PageBgComponent';
 
 class AboutComponent extends Component {
   componentWillMount() {
-  //  this.props.fetchRefData();
   }
   render() {
     return (
       <div>
-         About Component
+        <PageBgComponent className="bgClass" bgImg="images/brow1.jpg" imgText="About us" textCls="centerImg"/>
       </div>
     )
   }
 }
-// AboutComponent.propTypes = {
-//   items : PropTypes.array.isRequired,
-//   fetchRefData : PropTypes.func.isRequired
-// }
 
-const mapStateToProps = (state) => ({
-  items : state.data.items
-})
-
-export default withRouter(connect(mapStateToProps,{fetchRefSidebarData})(AboutComponent));
+export default AboutComponent;

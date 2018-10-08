@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom'
 import fetchRefSidebarData from '../../actions/refSidebarData';
-import { NavLink,Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom';
 import './NavBar.css';
 // 9D8253 E5CEA4 46220E
 // const HomeComponent =  (props) => (
@@ -16,20 +16,22 @@ class NavBarComponent extends Component {
     componentWillMount() {
         this.props.fetchRefSidebarData();
     }
-    componentDidMount() {
-        //this.activeRoute = this.props.location.pathname;
+    fetchActiveUrl(url) {
+        return url.href === this.props.location.pathname;
     }
-    shouldComponentUpdate() {
-        this.activeRoute = this.props.location.pathname;
-        return true
+    componentDidMount() {
+        //this.props.parentEl;
+    }
+    menuClick() {
+        this.props.navigationTrigger;
     }
     render() {
         const menuItems = this.props.items.menu ? this.props.items.menu.map((item, i) => (
-            <li key={i} className={this.activeRoute === item.href ? 'active' : ''}>
-                <Link  to={item.href} onClick={() => this.navigateTrigger(item.href)}>
+            <li key={i} className={this.fetchActiveUrl(item) ? 'active' : ''} onClick={() => this.menuClick()}>
+                <NavLink to={item.href} >
                     {/* <i className={'fa ' + item.icon} aria-hidden="true"></i> */}
                     <span class="menu-label">{item.title}</span>
-                </Link>
+                </NavLink>
             </li>
         )) : [];
         return (
@@ -41,7 +43,8 @@ class NavBarComponent extends Component {
 }
 NavBarComponent.propTypes = {
     items: PropTypes.object.isRequired,
-    fetchRefSidebarData: PropTypes.func.isRequired
+    fetchRefSidebarData: PropTypes.func.isRequired,
+    navigationTrigger: PropTypes.func.isRequired
 }
 
 const mapStateToProps = (state) => ({

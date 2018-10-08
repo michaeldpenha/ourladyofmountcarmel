@@ -57,6 +57,19 @@ a:focus {
 .textTransformUpperCase{
   text-transform: uppercase;
 }
+.bgClass{
+  height: 60vh;
+  width: 100vw;
+}
+.centerImg{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  color: #E5CEA4;
+  text-transform: uppercase;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

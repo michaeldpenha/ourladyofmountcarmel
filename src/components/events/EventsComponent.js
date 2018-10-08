@@ -1,33 +1,13 @@
 import React, { Component } from 'react'
-import { connect }  from 'react-redux';
-import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom'
-import fetchRefSidebarData from '../../actions/refSidebarData';
-// const HomeComponent =  (props) => (
-//    <h2>home</h2>
-// )
-
-
+import PageBgComponent from '../pageBg/PageBgComponent';
 
 class EventsComponent extends Component {
-  componentWillMount() {
-  //  this.props.fetchRefData();
-  }
   render() {
     return (
       <div>
-         Event Component
+         <PageBgComponent className="bgClass" bgImg="images/brow1.jpg" imgText="Events" textCls="centerImg"/>
       </div>
     )
   }
 }
-// EventsComponent.propTypes = {
-//   items : PropTypes.array.isRequired,
-//   fetchRefData : PropTypes.func.isRequired
-// }
-
-const mapStateToProps = (state) => ({
-  items : state.data.items
-})
-
-export default withRouter(connect(mapStateToProps,{fetchRefSidebarData})(EventsComponent));
+export default EventsComponent;
