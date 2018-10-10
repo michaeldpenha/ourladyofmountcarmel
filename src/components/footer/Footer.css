@@ -1,9 +1,10 @@
 footer {
-    position: absolute;
-    right: 0;
-    left: 0;
-    padding: 1rem;
-    background-color: #46220E;
-    color : #c39239;
-    text-align: center;
-  }
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding-top: 20px;
+  background-color: #735539;
+  color : #E5CEA4;
+  text-align: center;
+  height: 60px;
+}

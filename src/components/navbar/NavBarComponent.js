@@ -17,13 +17,13 @@ class NavBarComponent extends Component {
         this.props.fetchRefSidebarData();
     }
     fetchActiveUrl(url) {
-        return url.href === this.props.location.pathname;
+        return url.href == this.props.location.pathname;
     }
     componentDidMount() {
         //this.props.parentEl;
     }
     menuClick() {
-        this.props.navigationTrigger;
+        this.props && this.props.navigationTrigger ?this.props.navigationTrigger : '';
     }
     render() {
         const menuItems = this.props.items.menu ? this.props.items.menu.map((item, i) => (

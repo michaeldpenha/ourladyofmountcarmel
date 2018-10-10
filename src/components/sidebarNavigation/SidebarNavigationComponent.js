@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom'
 class SidebarNavigationComponent extends Component {
     render() {
         return (
-            <div className="dropdown right0" ref={(node) => { this.dropDownEL = node }} >
+            <div className="dropdown left25 zIndex" ref={(node) => { this.dropDownEL = node }} >
                 <button className="fa fa-bars menuIcon" ref={node => { this.navEl = node; }} onClick={() => this.navigaionTrigger()}></button>
                 <div class="dropdown-content" ref={node => { this.dropDownOverlayEl = node }}>
                     <NavBarComponent navigationTrigger={this.navigaionTrigger()} />

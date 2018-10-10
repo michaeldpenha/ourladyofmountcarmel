@@ -58,6 +58,12 @@
 .right0{
     right: 0;
 }
+.zIndex{
+    z-index: 1000;
+}
+.left25{
+    left : 25px;
+}
 .right10rem{
     right: 10rem;
 }

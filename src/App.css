@@ -4,6 +4,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
+    font-size: 16px;
 }
 
 p {
@@ -45,6 +46,9 @@ a:focus {
 .marginTop50{
   margin-top : 50px;
 }
+.marginBottom50{
+  margin-bottom : 50px;
+}
 .marginTop10{
   margin-top: 10px;
 }
@@ -66,12 +70,17 @@ a:focus {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 5rem;
+  font-size: 4em;
   color: #E5CEA4;
   text-transform: uppercase;
 }
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+@media (max-width: 768px) {
+  body{
+      font-size: 14px;
+  }
 }
 
