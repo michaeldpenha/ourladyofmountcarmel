@@ -95,6 +95,9 @@
     color: #46220E;
     background: #E5CEA4 ;
 }
+.dropdown-content ul li.active>a {
+    color: #46220E;
+}
 
 #sidebar ul li a i {
     margin-right: 10px;
@@ -102,7 +105,7 @@
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
-    color: #fff;
+    color: #46220E;
     background: #9D8253;
 }
 a[data-toggle="collapse"] {

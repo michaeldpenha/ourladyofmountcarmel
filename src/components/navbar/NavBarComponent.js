@@ -23,7 +23,7 @@ class NavBarComponent extends Component {
         //this.props.parentEl;
     }
     menuClick() {
-        this.props && this.props.navigationTrigger ?this.props.navigationTrigger : '';
+        this.props && this.props.navigationTrigger ?this.props.navigationTrigger() : '';
     }
     render() {
         const menuItems = this.props.items.menu ? this.props.items.menu.map((item, i) => (
@@ -43,8 +43,7 @@ class NavBarComponent extends Component {
 }
 NavBarComponent.propTypes = {
     items: PropTypes.object.isRequired,
-    fetchRefSidebarData: PropTypes.func.isRequired,
-    navigationTrigger: PropTypes.func.isRequired
+    fetchRefSidebarData: PropTypes.func.isRequired
 }
 
 const mapStateToProps = (state) => ({

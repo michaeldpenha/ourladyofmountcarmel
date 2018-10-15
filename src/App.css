@@ -62,12 +62,12 @@ a:focus {
   text-transform: uppercase;
 }
 .bgClass{
-  height: 60vh;
+  height: 30vh;
   width: 100vw;
 }
 .centerImg{
   position: absolute;
-  top: 30%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 4em;

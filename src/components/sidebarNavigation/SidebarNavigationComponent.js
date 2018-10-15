@@ -8,7 +8,7 @@ class SidebarNavigationComponent extends Component {
             <div className="dropdown left25 zIndex" ref={(node) => { this.dropDownEL = node }} >
                 <button className="fa fa-bars menuIcon" ref={node => { this.navEl = node; }} onClick={() => this.navigaionTrigger()}></button>
                 <div class="dropdown-content" ref={node => { this.dropDownOverlayEl = node }}>
-                    <NavBarComponent navigationTrigger={this.navigaionTrigger()} />
+                    <NavBarComponent navigationTrigger={() => { this.navigaionTrigger()}} />
                 </div>
             </div>
         )
