@@ -4,28 +4,28 @@ import { Route, NavLink } from 'react-router-dom';
 import "./About.css";
 import PageBgComponent from '../pageBg/PageBgComponent';
 import TabButtonComponent from '../tab-button/TabButtonComponent';
+import ParishComponent from './parish/ParishComponent';
+import TeamComponent from './team/TeamComponent';
+import HistoryComponent from './history/HistoryComponent';
 
 class AboutComponent extends Component {
   componentWillMount() {
   }
   render() {
-    let { match , history } = this.props;
+    let { match, history } = this.props;
     return (
       <div>
         <PageBgComponent className="bgClass" bgImg="images/brow1.jpg" imgText="About us" textCls="centerImg" />
         {/* <NavLink to='/about/front'>front</NavLink>
         <Route path='/about/:id' render={()=>{return <div>ichael</div>}}/> */}
         <div className="row section">
-          <TabButtonComponent baseUrl={`${match.path}`} history = {history}></TabButtonComponent>
-          {/* <div className="container flex-layout">
-            <button className="flex1">Our Parish</button>
-            <button className="flex1">Our Team</button>
-            <button className="flex1">Our History</button>
-          </div> */}
+          <TabButtonComponent baseUrl={`${match.path}`} history={history}></TabButtonComponent>
         </div>
-        <Route path={`${match.path}/our-parish`} render={() => { return <div>michael</div> }}></Route>
-        <Route path={`${match.path}/our-team`} render={() => { return <div>Team</div> }}></Route>
-        <Route path={`${match.path}/our-history`} render={() => { return <div>History</div> }}></Route>
+        <div className="row section">
+          <Route path={`${match.path}/our-parish`} component={ParishComponent}></Route>
+          <Route path={`${match.path}/our-team`} component={TeamComponent}></Route>
+          <Route path={`${match.path}/our-history`} component={HistoryComponent}></Route>
+        </div>
       </div>
     )
   }

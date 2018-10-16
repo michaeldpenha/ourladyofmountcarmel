@@ -1,0 +1,33 @@
+.width6vw{
+    width: 6vw;
+}
+.height10vh{
+    height:10vh;
+}
+.textAlignCenter{
+    text-align : center;
+}
+.nonActiveTab{
+    background-color: #E5CEA4;
+    border: 1px solid #ffffff;
+}
+.paddingTop10{
+    padding-top:10px;
+}
+.paddingBottom10{
+    padding-bottom: 10px;
+}
+.marginBottom0{
+    margin-bottom: 0;
+}
+.disbalePColor{
+    color: #333333;
+}
+.tabActive.nonActiveTab{
+    background-color: transparent;
+    border-bottom: 5px solid #E5CEA4;
+}
+.tabActive .disbalePColor{
+    color: #46220E;
+    font-weight: bold;
+}
