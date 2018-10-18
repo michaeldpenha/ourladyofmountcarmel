@@ -1,0 +1,13 @@
+.parishCls{
+    float: right;
+    height: 20vh;
+    width: 15vw;
+    background-size: cover;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #9D8253;
+    padding: 10px;
+}
+.justify-content{
+    text-align: justify;
+}
