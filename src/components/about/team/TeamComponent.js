@@ -1,61 +1,33 @@
 import React, { Component } from 'react'
 import './Team.css'
+import TeamCardComponent from '../../teamcard/TeamCardComponent';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom'
+import fetchAboutUsData from "../../../actions/refAboutData";
+import {
+  FETCH_REF_ABOUT_TEAM_DATA
+} from '../../../actions/types';
+
 class TeamComponent extends Component {
+  componentWillMount() {
+    this.props.fetchAboutUsData(FETCH_REF_ABOUT_TEAM_DATA);
+  }
   render() {
+    let data = this.props.items ? this.props.items : [];
     return (
       <div className="container">
-        <div className="row">
-          <div className="col-md-4">
-            <div class="card">
-              <img src="images/profile.png" className="team-profile" alt="John" />
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <p>Harvard University</p>
-              <button className="contact">Contact</button>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div class="card">
-            <img src="images/profile.png" className="team-profile" alt="John" />
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <p>Harvard University</p>
-              <button className="contact">Contact</button>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div class="card">
-            <img src="images/profile.png" className="team-profile" alt="John" />
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <p>Harvard University</p>
-              <button className="contact">Contact</button>
-            </div>  
-          </div>
-        </div>
-        {/* <div class="card col-md-3">
-          <img src="img.jpg" alt="John"  />
-          <h1>John Doe</h1>
-          <p class="title">CEO & Founder, Example</p>
-          <p>Harvard University</p>
-          <p><button>Contact</button></p>
-        </div>
-        <div class="card col-md-3">
-          <img src="img.jpg" alt="John"  />
-          <h1>John Doe</h1>
-          <p class="title">CEO & Founder, Example</p>
-          <p>Harvard University</p>
-          <p><button>Contact</button></p>
-        </div>
-        <div class="card col-md-3">
-          <img src="img.jpg" alt="John"  />
-          <h1>John Doe</h1>
-          <p class="title">CEO & Founder, Example</p>
-          <p>Harvard University</p>
-          <p><button>Contact</button></p>
-        </div> */}
+        <TeamCardComponent teamData={data}></TeamCardComponent>
       </div>
     )
   }
 }
-export default TeamComponent;
+TeamComponent.propTypes = {
+  fetchAboutUsData: PropTypes.func.isRequired,
+  items: PropTypes.array.isRequired
+}
+
+const mapStateToProps = (state) => ({
+  items: state.data.team
+})
+export default withRouter(connect(mapStateToProps, { fetchAboutUsData })(TeamComponent));
